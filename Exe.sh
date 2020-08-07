@@ -1,4 +1,5 @@
 #------------installing suggested plugins------------------------
+read -p "Enter your jenkins server ip: "  ip
 wget http://$ip:8080/jnlpJars/jenkins-cli.jar
 content=$(tail -n +2 plugin.txt)
 for line in $content; do

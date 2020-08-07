@@ -15,5 +15,5 @@ service jenkins restart
 
 #------------unlock jenkins and create admin user in jenkins-------
 mkdir /var/lib/jenkins/init.groovy.d
-cp Automate.txt /var/lib/jenkins/init.groovy.d/basic-security.groovy
+cp Automate.sh /var/lib/jenkins/init.groovy.d/basic-security.groovy
 service jenkins restart

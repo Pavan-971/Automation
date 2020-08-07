@@ -1,4 +1,4 @@
-read -p "Enter your jenkins server ip: "  ip
+
 yum install java-1.8.0-openjdk.x86_64 -y
 sudo cp /etc/profile /etc/profile_backup
 echo 'export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk' | sudo tee -a /etc/profile

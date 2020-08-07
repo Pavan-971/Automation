@@ -18,4 +18,5 @@ service jenkins restart
 mkdir /var/lib/jenkins/init.groovy.d
 cp Automate.sh /var/lib/jenkins/init.groovy.d/basic-security.groovy
 service jenkins restart
+sleep 60
 

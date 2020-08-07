@@ -17,8 +17,6 @@ service jenkins restart
 #------------unlock jenkins and create admin user in jenkins-------
 mkdir /var/lib/jenkins/init.groovy.d
 cp Automate.sh /var/lib/jenkins/init.groovy.d/basic-security.groovy
-service jenkins restart
-sleep 20
 #------------installing suggested plugins------------------------
 wget http://$ip:8080/jnlpJars/jenkins-cli.jar
 content=$(tail -n +2 plugin.txt)

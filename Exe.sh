@@ -1,8 +1,6 @@
-val=$(wc -l < plugin.txt)
+content=$(tail -n +2 plugin.txt)
+for line in $content; do
+         var=$(echo $line|tr -d '\n')
 
-while read line;
-do
-        var=$(echo $line|tr -d '\n')
-        echo $line
-        java -jar jenkins-cli.jar -s http://18.219.212.63:8080 -auth pavan:pavan@1 install-plugin  $var
+         java -jar jenkins-cli.jar -s http://18.219.212.63:8080 -auth pavan:pavan@1 install-plugin  $var
 done < plugin.txt;
